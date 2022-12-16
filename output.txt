@@ -1,0 +1,288 @@
+Hotel opened.--------------------------------------------
+Came client 1. Wants to stay for 5 days.
+Came client 2. Wants to stay for 2 days.
+I am client 1. I am checking in.
+Came client 3. Wants to stay for 6 days.
+I am client 2. I am checking in.
+Came client 4. Wants to stay for 1 days.
+I am client 3. I am checking in.
+Came client 5. Wants to stay for 3 days.
+I am client 4. I am checking in.
+5 clients are waiting near the hotel.
+Day 1 started.---------------------------------
+I am client 1, stayed here for 1 days.
+I am client 2, stayed here for 1 days.
+I am client 5, stayed here for 1 days.
+I am client 3, stayed here for 1 days.
+I am client 4, stayed here for 1 days.
+I am client 4. I am checking out.
+Day 1 ended.-----------------------------------
+Came client 6. Wants to stay for 1 days.
+Came client 7. Wants to stay for 5 days.
+I am client 6. I am checking in.
+Came client 8. Wants to stay for 2 days.
+I am client 7. I am checking in.
+Came client 9. Wants to stay for 2 days.
+I am client 8. I am checking in.
+Came client 10. Wants to stay for 6 days.
+I am client 9. I am checking in.
+Came client 11. Wants to stay for 7 days.
+I am client 10. I am checking in.
+6 clients are waiting near the hotel.
+Day 2 started.---------------------------------
+I am client 1, stayed here for 2 days.
+I am client 5, stayed here for 2 days.
+I am client 3, stayed here for 2 days.
+I am client 7, stayed here for 1 days.
+I am client 6, stayed here for 1 days.
+I am client 6. I am checking out.
+Day 2 ended.-----------------------------------
+Came client 12. Wants to stay for 4 days.
+Came client 13. Wants to stay for 4 days.
+I am client 12. I am checking in.
+Came client 14. Wants to stay for 1 days.
+I am client 13. I am checking in.
+Came client 15. Wants to stay for 4 days.
+I am client 14. I am checking in.
+4 clients are waiting near the hotel.
+I am client 15. I am checking in.
+I am client 10, stayed here for 1 days.
+I am client 11, stayed here for 1 days.
+I am client 9, stayed here for 1 days.
+I am client 8, stayed here for 1 days.
+I am client 2, stayed here for 2 days.
+I am client 2. I am checking out.
+Day 3 started.---------------------------------
+Day 3 ended.-----------------------------------
+Came client 16. Wants to stay for 2 days.
+Came client 17. Wants to stay for 5 days.
+I am client 16. I am checking in.
+Came client 18. Wants to stay for 6 days.
+I am client 17. I am checking in.
+Came client 19. Wants to stay for 5 days.
+I am client 18. I am checking in.
+Came client 20. Wants to stay for 5 days.
+Came client 21. Wants to stay for 5 days.
+I am client 20. I am checking in.
+I am client 19. I am checking in.
+Came client 22. Wants to stay for 1 days.
+I am client 21. I am checking in.
+Came client 23. Wants to stay for 6 days.
+Came client 24. Wants to stay for 4 days.
+I am client 23. I am checking in.
+I am client 22. I am checking in.
+9 clients are waiting near the hotel.
+I am client 11, stayed here for 2 days.
+I am client 5, stayed here for 3 days.
+I am client 5. I am checking out.
+I am client 13, stayed here for 1 days.
+I am client 15, stayed here for 1 days.
+I am client 7, stayed here for 2 days.
+I am client 3, stayed here for 3 days.
+I am client 9, stayed here for 2 days.
+I am client 9. I am checking out.
+I am client 1, stayed here for 3 days.
+I am client 12, stayed here for 1 days.
+I am client 14, stayed here for 1 days.
+I am client 14. I am checking out.
+Day 4 started.---------------------------------
+Day 4 ended.-----------------------------------
+Came client 25. Wants to stay for 5 days.
+Came client 26. Wants to stay for 4 days.
+I am client 25. I am checking in.
+Came client 27. Wants to stay for 7 days.
+I am client 26. I am checking in.
+Came client 28. Wants to stay for 7 days.
+I am client 27. I am checking in.
+Came client 29. Wants to stay for 3 days.
+I am client 28. I am checking in.
+5 clients are waiting near the hotel.
+I am client 10, stayed here for 2 days.
+I am client 8, stayed here for 2 days.
+I am client 8. I am checking out.
+I am client 21, stayed here for 1 days.
+I am client 22, stayed here for 1 days.
+I am client 22. I am checking out.
+Day 5 started.---------------------------------
+Day 5 ended.-----------------------------------
+Came client 30. Wants to stay for 1 days.
+Came client 31. Wants to stay for 3 days.
+I am client 30. I am checking in.
+Came client 32. Wants to stay for 1 days.
+I am client 31. I am checking in.
+Came client 33. Wants to stay for 1 days.
+Came client 34. Wants to stay for 1 days.
+I am client 33. I am checking in.
+I am client 32. I am checking in.
+Came client 35. Wants to stay for 7 days.
+I am client 34. I am checking in.
+6 clients are waiting near the hotel.
+I am client 7, stayed here for 3 days.
+I am client 16, stayed here for 1 days.
+I am client 12, stayed here for 2 days.
+I am client 13, stayed here for 2 days.
+I am client 17, stayed here for 1 days.
+I am client 1, stayed here for 4 days.
+I am client 20, stayed here for 1 days.
+I am client 24, stayed here for 1 days.
+I am client 18, stayed here for 1 days.
+I am client 23, stayed here for 1 days.
+I am client 19, stayed here for 1 days.
+I am client 15, stayed here for 2 days.
+I am client 11, stayed here for 3 days.
+I am client 3, stayed here for 4 days.
+I am client 26, stayed here for 1 days.
+I am client 25, stayed here for 1 days.
+I am client 29, stayed here for 1 days.
+I am client 21, stayed here for 2 days.
+I am client 28, stayed here for 1 days.
+I am client 10, stayed here for 3 days.
+I am client 27, stayed here for 1 days.
+Day 6 started.---------------------------------
+I am client 30, stayed here for 1 days.
+I am client 30. I am checking out.
+Day 6 ended.-----------------------------------
+Came client 36. Wants to stay for 4 days.
+1 clients are waiting near the hotel.
+I am client 36. I am checking in.
+I am client 29, stayed here for 2 days.
+I am client 3, stayed here for 5 days.
+I am client 21, stayed here for 3 days.
+I am client 28, stayed here for 2 days.
+I am client 26, stayed here for 2 days.
+I am client 25, stayed here for 2 days.
+I am client 31, stayed here for 1 days.
+I am client 12, stayed here for 3 days.
+I am client 13, stayed here for 3 days.
+I am client 10, stayed here for 4 days.
+I am client 32, stayed here for 1 days.
+I am client 32. I am checking out.
+Day 7 started.---------------------------------
+Day 7 ended.-----------------------------------
+Came client 37. Wants to stay for 7 days.
+Came client 38. Wants to stay for 6 days.
+I am client 37. I am checking in.
+Came client 39. Wants to stay for 7 days.
+I am client 38. I am checking in.
+Came client 40I am client tay for 6ys.
+Day 6 st days.
+39. I am checking in.
+Came client 41. Wants to stay for 2 days.
+I am client 40. I am checking in.
+5 clients are waiting near the hotel.
+I am client 24, stayed here for 2 days.
+I am client 34, stayed here for 1 days.
+I am client 34. I am checking out.
+I am client 41. I am checking in.
+I am client 18, stayed here for 2 days.
+I am client 1, stayed here for 5 days.
+I am client 1. I am checking out.
+Day 8 started.---------------------------------
+Day 8 ended.-----------------------------------
+Came client 42. Wants to stay for 7 days.
+Came client 43. Wants to stay for 6 days.
+I am client 42. I am checking in.
+Came client 44. Wants to stay for 1 days.
+Came client 45. Wants to stay for 2 days.
+Came client 46. Wants to stay for 1 days.
+Came client 47. Wants to stay for 3 days.
+Came client 48. Wants to stay for 1 days.
+7 clients are waiting near the hotel.
+I am client 7, stayed here for 4 days.
+I am client 11, stayed here for 4 days.
+I am client 17, stayed here for 2 days.
+I am client 20, stayed here for 2 days.
+I am client 19, stayed here for 2 days.
+I am client 33, stayed here for 1 days.
+I am client 33. I am checking out.
+I am client 47. I am checking in.
+I am client 35, stayed here for 1 days.
+I am client 27, stayed here for 2 days.
+I am client 16, stayed here for 2 days.
+I am client 16. I am checking out.
+I am client 46. I am checking in.
+I am client 15, stayed here for 3 days.
+I am client 23, stayed here for 2 days.
+I am client 26, stayed here for 3 days.
+I am client 25, stayed here for 3 days.
+I am client 3, stayed here for 6 days.
+I am client 3. I am checking out.
+I am client 43. I am checking in.
+I am client 36, stayed here for 1 days.
+I am client 31, stayed here for 2 days.
+I am client 21, stayed here for 4 days.
+I am client 13, stayed here for 4 days.
+I am client 13. I am checking out.
+I am client 45. I am checking in.
+I am client 29, stayed here for 3 days.
+I am client 29. I am checking out.
+I am client 44. I am checking in.
+I am client 28, stayed here for 3 days.
+I am client 10, stayed here for 5 days.
+I am client 12, stayed here for 4 days.
+I am client 12. I am checking out.
+I am client 48. I am checking in.
+I am client 38, stayed here for 1 days.
+I am client 39, stayed here for 1 days.
+I am client 37, stayed here for 1 days.
+I am client 24, stayed here for 3 days.
+I am client 40, stayed here for 1 days.
+I am client 41, stayed here for 1 days.
+I am client 18, stayed here for 3 days.
+Day 9 started.---------------------------------
+I am client 7, stayed here for 5 days.
+I am client 7. I am checking out.
+Day 9 ended.-----------------------------------
+Came client 49. Wants to stay for 7 days.
+Came client 50. Wants to stay for 4 days.
+I am client 49. I am checking in.
+Came client 51. Wants to stay for 2 days.
+Came client 52. Wants to stay for 1 days.
+Came client 53. Wants to stay for 1 days.
+Came client 54. Wants to stay for 1 days.
+Came client 55. Wants to stay for 1 days.
+7 clients are waiting near the hotel.
+I am client 36, stayed here for 2 days.
+I am client 48, stayed here for 1 days.
+I am client 48. I am checking out.
+I am client 53. I am checking in.
+I am client 24, stayed here for 4 days.
+I am client 24. I am checking out.
+I am client 54. I am checking in.
+I am client 41, stayed here for 2 days.
+I am client 41. I am checking out.
+I am client 55. I am checking in.
+I am client 18, stayed here for 4 days.
+I am client 45, stayed here for 1 days.
+I am client 35, stayed here for 2 days.
+I am client 46, stayed here for 1 days.
+I am client 46. I am checking out.
+I am client 51. I am checking in.
+I am client 11, stayed here for 5 days.
+I am client 42, stayed here for 1 days.
+I am client 47, stayed here for 1 days.
+I am client 17, stayed here for 3 days.
+I am client 26, stayed here for 4 days.
+I am client 26. I am checking out.
+I am client 52. I am checking in.
+I am client 23, stayed here for 3 days.
+I am client 28, stayed here for 4 days.
+I am client 39, stayed here for 2 days.
+I am client 27, stayed here for 3 days.
+I am client 25, stayed here for 4 days.
+I am client 43, stayed here for 1 days.
+I am client 20, stayed here for 3 days.
+I am client 15, stayed here for 4 days.
+I am client 15. I am checking out.
+I am client 50. I am checking in.
+I am client 37, stayed here for 2 days.
+I am client 31, stayed here for 3 days.
+I am client 31. I am checking out.
+Day 10 started.---------------------------------
+Day 10 ended.-----------------------------------
+Came client 56. Wants to stay for 1 days.
+Came client 57. Wants to stay for 3 days.
+I am client 56. I am checking in.
+Came client 58. Wants to stay for 3 days.
+Came client 59. Wants to stay for 7 days.
+4 clients are waiting near the hotel.

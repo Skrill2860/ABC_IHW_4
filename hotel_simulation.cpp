@@ -4,6 +4,8 @@
 #include <time.h>
 #include <iostream>
 #include <ctime>
+#include <string>
+#include <fstream>
 #include <pthread.h>
 #include <semaphore.h>
 #include <unistd.h>
@@ -55,10 +57,13 @@ public:
     int available_room_count;
     // day counter
     int current_day = 0;
+    // number of days to run
+    int number_of_days;
 
-    Hotel(int available_room_count = 30) {
+    Hotel(int available_room_count = 30, int number_of_days = 10) {
         this->available_room_count = available_room_count;
-        out << "Hotel opened.--------------------------------------------\n";
+        this->number_of_days = number_of_days;
+        *out << "Hotel opened.--------------------------------------------\n";
         pthread_cond_broadcast(&has_rooms);
     }
 
@@ -79,16 +84,16 @@ public:
         sleep(1);
         for (int i = 0; i < number_of_days; i++)
         {
-            out << "Day " << ++current_day << " started.---------------------------------\n";
+            *out << "Day " << ++current_day << " started.---------------------------------\n";
             // notify clients that day has started, so they can do their stuff (stay for another day or leave)
             pthread_cond_broadcast(&day_started);
             sleep(1);
-            out << "Day " << current_day << " ended.-----------------------------------\n";
+            *out << "Day " << current_day << " ended.-----------------------------------\n";
             // notify that day ended, so new clients can be generated
             pthread_cond_broadcast(&day_ended);
             sleep(1);
         }
-        out << "Hotel takes a break for an unknown amount of time.-------------------\n";
+        *out << "Hotel takes a break for an unknown amount of time.-------------------\n";
     }
 };
 
@@ -121,7 +126,7 @@ public:
         this->id = id;
         this->hotel = hotel;
         this->days_to_stay = days_to_stay;
-        out << "Came client " << id << ". Wants to stay for " << days_to_stay << " days.\n";
+        *out << "Came client " << id << ". Wants to stay for " << days_to_stay << " days.\n";
     }
 
     virtual void run() {
@@ -132,7 +137,7 @@ public:
             pthread_cond_wait(&has_rooms, &hotel_mutex);
         }
         hotel->check_in();
-        out << "I am client " << id << ". I am checking in.\n";
+        *out << "I am client " << id << ". I am checking in.\n";
         pthread_mutex_unlock(&hotel_mutex);
         // decrease number of clients waiting near the hotel
         pthread_mutex_lock(&generator_mutex);
@@ -143,12 +148,12 @@ public:
             // daily mutex is a dummy, as there is nothing critical in this section
             // just making sure that no one is "time travelling"
             pthread_cond_wait(&day_started, &daily_mutex);
-            out << "I am client " << id << ", stayed here for " << i + 1 << " days.\n";
+            *out << "I am client " << id << ", stayed here for " << i + 1 << " days.\n";
         }
         // lock hotel to check out
         pthread_mutex_lock(&hotel_mutex);
         hotel->check_out();
-        out << "I am client " << id << ". I am checking out.\n";
+        *out << "I am client " << id << ". I am checking out.\n";
         pthread_mutex_unlock(&hotel_mutex);
         delete this;
     }
@@ -174,7 +179,7 @@ void Generator::run() {
         {
             // limiting number of clients that there is no problems with too much threads
             if (clients_count >= MAX_CLIENT_COUNT) {
-                out << "The hotel and benches in front of it are FULL. No more clients can come right now." << std::endl;
+                *out << "The hotel and benches in front of it are FULL. No more clients can come right now." << std::endl;
                 break;
             }
             int dts = rand() % 7 + 1;
@@ -183,7 +188,7 @@ void Generator::run() {
             i++;
             client->start();
         }
-        out << clients_count << " clients are waiting near the hotel." << std::endl;
+        *out << clients_count << " clients are waiting near the hotel." << std::endl;
         pthread_mutex_unlock(&generator_mutex);
     }
 }
@@ -207,16 +212,16 @@ void getMaxClients(std::istream& in = std::cin) {
     in >> Generator::MAX_CLIENT_COUNT;
 }
 // get number of days from user, from istream in to hotel_days
-void getNumberOfDays(std::istream& in = std::cin, int& hotel_days) {
+void getNumberOfDays(std::istream& in, int& hotel_days) {
     in >> hotel_days;
 }
 
-int main (int argc, char** argv[]) {
+int main (int argc, char* argv[]) {
     setvbuf(stdout, NULL, _IONBF, 0);
     init_mutexes();
     int hotel_days = 10;
     if (argc > 1) {
-        if (argv[1] == "f") {
+        if (argv[1] == std::string("f")) {
             if (argc < 3) {
                 std::cout << "No input file specified. Exiting." << std::endl;
                 std::cout << "Usage: " << argv[0] << " f <input_file> <output_file>" << std::endl;
@@ -227,36 +232,41 @@ int main (int argc, char** argv[]) {
                 std::cout << "Usage: " << argv[0] << " f <input_file> <output_file>" << std::endl;
                 return 0;
             }
-            in = std::ifstream(argv[2]);
-            out = std::ofstream(argv[3]);
-            try
-            getMaxClientsPerDay(in);
-            getMaxClients(in);
-            getNumberOfDays(in, hotel_days);
-        }
-        else if (argv[1] == "c") {
-            std::cout << "Enter max clients per day: ";
-            getMaxClientsPerDay(in);
-            std::cout << "Enter max clients count: ";
-            getMaxClients(in);
-            std::cout << "Enter number of days for hotel to run: ";
-            getNumberOfDays(in, hotel_days);
-        }
-        else if (argv[1] == "t") {
-            // read from terminal
-            if (argc < 4) {
-                std::cout << "Not enough arguments. Exiting." << std::endl;
-                std::cout << "Usage: " << argv[0] << " t <max_clients_per_day> <max_clients_count>" << std::endl;
+            std::string input_file = argv[2];
+            std::string output_file = argv[3];
+            in = new std::ifstream(input_file);
+            out = new std::ofstream(output_file);
+            try {
+                getMaxClientsPerDay(*in);
+                getMaxClients(*in);
+                getNumberOfDays(*in, hotel_days);
+            } catch (std::exception& e) {
+                std::cout << "Error reading from file. Exiting." << std::endl;
                 return 0;
             }
-            MAX_NEW_CLIENTS_PER_DAY = std::stoi(argv[2]);
-            MAX_CLIENT_COUNT = std::stoi(argv[3]);
+        }
+        else if (argv[1] == std::string("c")) {
+            std::cout << "Enter max clients per day: ";
+            getMaxClientsPerDay(*in);
+            std::cout << "Enter max clients count: ";
+            getMaxClients(*in);
+            std::cout << "Enter number of days for hotel to run: ";
+            getNumberOfDays(*in, hotel_days);
+        }
+        else if (argv[1] == std::string("t")) {
+            // read from terminal
+            if (argc < 5) {
+                std::cout << "Not enough arguments. Exiting." << std::endl;
+                std::cout << "Usage: " << argv[0] << " t <max_clients_per_day> <max_clients_count> <number_of_days>" << std::endl;
+                return 0;
+            }
+            Generator::MAX_NEW_CLIENTS_PER_DAY = std::stoi(argv[2]);
+            Generator::MAX_CLIENT_COUNT = std::stoi(argv[3]);
+            hotel_days = std::stoi(argv[4]);
             return 0;
         }
     }
-
-
-    Hotel* hotel = new Hotel();
+    Hotel* hotel = new Hotel(30, hotel_days);
     Generator* generator = new Generator(hotel);
     generator->start();
     hotel->start();
